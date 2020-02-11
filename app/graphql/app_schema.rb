@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AppSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
@@ -10,5 +12,4 @@ class AppSchema < GraphQL::Schema
 
   use GraphQL::Analysis::AST
   use BatchLoader::GraphQL
-
 end

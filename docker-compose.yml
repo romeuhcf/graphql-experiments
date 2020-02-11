@@ -5,12 +5,21 @@ services:
     volumes:
       - graphdb:/var/lib/postgresql/data
       - bundle:/usr/local/bundle
-  web:
+  messages:
     build: .
     volumes:
       - .:/app
     ports:
       - "3000:3000"
+    depends_on:
+      - db
+      - users
+  users:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3001:3000"
     depends_on:
       - db
 

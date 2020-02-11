@@ -9,4 +9,4 @@ COPY . .
 ENTRYPOINT ["/app/entrypoint.sh"]
 EXPOSE 3000
 # Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-b", "0.0.0.0", "-P", "/tmp/rails.pid"]

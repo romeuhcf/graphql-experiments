@@ -6,6 +6,7 @@ ruby '2.6.3'
 gem 'faker'
 
 gem 'graphql'
+gem 'graphlient'
 gem 'batch-loader'
 gem 'graphiql-rails'
 
